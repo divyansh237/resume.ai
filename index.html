@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glowing Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">Resume Builder</h1>
+
+    <div class="template-switch">
+      <button onclick="switchTemplate('classic')" class="glow-btn">Classic Template</button>
+      <button onclick="switchTemplate('modern')" class="glow-btn">Modern Template</button>
+    </div>
+
+    <form id="resume-form" class="glow-box">
+      <input type="text" placeholder="Full Name" id="name" required />
+      <input type="email" placeholder="Email" id="email" required />
+      <input type="tel" placeholder="Phone" id="phone" required />
+      <input type="text" placeholder="LinkedIn Profile" id="linkedin" />
+      <textarea placeholder="About You" id="about" rows="4"></textarea>
+      
+      <h3 class="section-title">Skills</h3>
+      <input type="text" id="skills" placeholder="e.g. HTML, CSS, JS" required />
+
+      <h3 class="section-title">Education</h3>
+      <input type="text" id="education" placeholder="e.g. B.Tech, XYZ University" required />
+
+      <h3 class="section-title">Experience</h3>
+      <textarea id="experience" placeholder="Work experience here..." rows="4"></textarea>
+
+      <button type="button" class="glow-btn" onclick="generatePDF()">Generate PDF</button>
+    </form>
+
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
